@@ -13,13 +13,6 @@ import { onMounted, ref } from 'vue'
 const charactersResult = ref([])
 const charactersInfo = ref({})
 
-// const getData = async () => {
-//   const responce = await fetch
-//   const result = await responce.json()
-//   charactersResult.value = result.results
-//   charactersInfo.value = result.info
-// }
-
 const getData = () => {
   fetch('https://rickandmortyapi.com/api/character')
     .then((responce) => responce.json())
